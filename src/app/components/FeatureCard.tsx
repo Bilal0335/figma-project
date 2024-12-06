@@ -1,17 +1,21 @@
 import Image, { StaticImageData } from "next/image";
 import { Heebo } from "next/font/google";
-
 const heeboFont = Heebo({ subsets: ["latin"] });
-
 interface FeatureCardProps {
-  imageSrc: StaticImageData; // Path to the image
-  title: string;    // Title of the feature
-  year: string;     // Year of the feature
-  category: string; // Category of the feature
-  description: string; // Description text
+  imageSrc: StaticImageData;
+  title: string;
+  year: string;
+  category: string;
+  description: string;
 }
 
-const FeatureCard: React.FC<FeatureCardProps> = ({ imageSrc, title, year, category, description }) => {
+const FeatureCard: React.FC<FeatureCardProps> = ({
+  imageSrc,
+  title,
+  year,
+  category,
+  description
+}) => {
   return (
     <div className="flex justify-around items-center gap-9 space-y-5 ">
       {/* Image */}
@@ -28,11 +32,11 @@ const FeatureCard: React.FC<FeatureCardProps> = ({ imageSrc, title, year, catego
           <span className="bg-myPink text-white rounded-xl px-3 py-1">
             {year}
           </span>
-          <span className="text-gray-600 rounded-xl px-3 py-1">
-            {category}
-          </span>
+          <span className="text-gray-600 rounded-xl px-3 py-1">{category}</span>
         </div>
-        <p className={`${heeboFont.className} font-light text-[18px] text-gray-700 mt-5`}>
+        <p
+          className={`${heeboFont.className} font-light text-[18px] text-gray-700 mt-5`}
+        >
           {description}
         </p>
       </div>
