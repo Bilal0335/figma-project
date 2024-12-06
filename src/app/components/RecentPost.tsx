@@ -1,6 +1,6 @@
 import Link from "next/link";
-import { Heebo } from "next/font/google";
 import RecentPostCard from "./RecentPostCard";
+import { Heebo } from "next/font/google";
 const heeboFont = Heebo({ subsets: ["latin"] });
 const RecentPost = () => {
   return (

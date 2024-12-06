@@ -1,3 +1,4 @@
+import FeatureWork from "./components/FeatureWork";
 import Hero from "./components/Hero";
 import RecentPost from "./components/RecentPost";
 
@@ -7,6 +8,7 @@ export default function Home() {
       {/* Hero section */}
       <Hero />
       <RecentPost />
+      <FeatureWork />
     </div>
   );
 }
